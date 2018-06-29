@@ -18,7 +18,6 @@
     height: 500px; 
 
     /* Create the parallax scrolling effect */
-    background-image: url(img/slider.jpg)
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,4 +79,29 @@
 
 .padding-showroom{
 	padding-top: 10%;
+}
+
+.blue{
+	color: #00387e;
+}
+
+.white-background{
+	background-color: rgba(255,255,255,0.7);
+	padding: 5%;
+}
+.float{
+	float:right;
+}
+
+.nosotros-imagen{
+	background-image: url(img/nosotros.jpg);
+}
+
+.outline-blue{
+	border:#00387e solid 3px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	padding:1%;
 }
