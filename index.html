@@ -15,6 +15,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 		<!-- Plugin CSS -->
 		<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
@@ -55,6 +56,14 @@
 		<header class="masthead text-center text-white d-flex parallax">
 			<div class="container my-auto">
 				<div class="row">
+					<div class="col-lg-12 heading-padding" style="padding-right: 25%; padding-left: 25%;">
+						<div style="background-color:rgba(0, 0, 255, 0.7);background-blend-mode: multiply; ">
+								<h1 class="section-heading text-center" style="font-size: 2em;  padding: 2%; color: white;">VIVE EL SUEÑO AMERICANO</h1>
+							</div>
+							<div style="background-color:rgba(255, 0, 0, 0.5);background-blend-mode: multiply; padding: 1%;">
+								<h3 style="color:white; font-size:1.5em;">Nosotros tramitamos tu visa</h3>
+							</div>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -106,7 +115,7 @@
 							<img id="visa-img" src="img/visa.jpg" width="250" style="margin:auto; position:relative;">
 						</div>
 						<div class="col-lg-7" style="color:#00387e">
-							<p id="visa-text">Estados Unidos, México y Canadá participan en el programa electrónico FAST para acelerar el tráfico comercial seguro a través de sus fronteras, coordinando principios para el manejo de riesgos comunes, seguridad de la cadena de abastecimiento, asociaciones industriales y tecnología avanzada para inspeccionar y autorizar embarques comerciales.</p>
+							<p id="text">Estados Unidos, México y Canadá participan en el programa electrónico FAST para acelerar el tráfico comercial seguro a través de sus fronteras, coordinando principios para el manejo de riesgos comunes, seguridad de la cadena de abastecimiento, asociaciones industriales y tecnología avanzada para inspeccionar y autorizar embarques comerciales.</p>
 						</div>
 
 					</div>
@@ -117,13 +126,14 @@
 
 		<!--UBICACION-->
 		<section class="p-0" id="portfolio">
-			<div class="container-fluid" style="background-image: url('img/back.jpg');min-height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat;background-size: cover;">
+			<div class="container-fluid" style="background-image: url('img/ubicacion.jpg');min-height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat;background-size: cover;">
 				<div class="row">
-					<div class="col-lg-12 text-center padding-showroom">
-						<h1>SHOWROOM</h1>
-						<p>Conoce nuestro showroom</p>
-						<a href="https://goo.gl/maps/WdAnWAAi26K2" target=_blank><button class="btn btn-danger">Ver Mapa</button></a>
-					</div>
+					<div class="col-lg-12 text-center padding-showroom" style="padding:20%;">
+						<div class="white-ubicacion">
+							<h1 style="color: #00387e;">UBICACIÓN</h1>
+							<p style="color: #00387e;">Maclovio Herrera #2809<br>Melchor Ocampo #1600 Local No. 3<br>Ferrocarril<br>88050 Nuevo Laredo<br>México</p>
+							<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884.8659456393143!2d-99.50661285256867!3d27.48594839492982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86612236845d698b%3A0xc641fdda9eb599e0!2sAv.+Ocampo+1600%2C+Ferrocarril%2C+88050+Nuevo+Laredo%2C+Tamps.!5e0!3m2!1ses!2smx!4v1530301870698"target="_blank"><button class="btn btn-danger">Ver Mapa</button></a>
+						</div>
 				</div>
 			</div>
 		</section>
@@ -131,8 +141,9 @@
 		<section >
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 mx-auto text-center d-inline" id="contact">
-						<h1 class="section-heading">CONTACTO</h1>
+					<div class="col-lg-6 mx-auto d-inline text-center" id="contact">
+						<h1 class="section-heading ">CONTACTO</h1>
+						<p style="color: #00387e;">Lic. J. Félix Mireles Reyes<br>Asesoría Profesional<br>Tel: 867 714 21 02<br><br>Horarios:<br>Lunes a Viernes de 8:00-18:00hrs.<br>Sábados:<br>9:00-15:00hrs.</p>
 					</div>
 					<div class="col-lg-6 padding-container d-inline">
 						<form name="contactform" method="post" action="send_form_email.php">
@@ -220,11 +231,57 @@
 		<script type="text/javascript">
 			//VISAS
 			document.getElementById("visas").addEventListener("click", function () {
-		document.getElementById("visa-text").innerHTML="Estados Unidos, México y Canadá participan en el programa electrónico FAST para acelerar el tráfico comercial seguro a través de sus fronteras, coordinando principios para el manejo de riesgos comunes, seguridad de la cadena de abastecimiento, asociaciones industriales y tecnología avanzada para inspeccionar y autorizar embarques comerciales.";
+		document.getElementById("text").innerHTML="Estados Unidos, México y Canadá participan en el programa electrónico FAST para acelerar el tráfico comercial seguro a través de sus fronteras, coordinando principios para el manejo de riesgos comunes, seguridad de la cadena de abastecimiento, asociaciones industriales y tecnología avanzada para inspeccionar y autorizar embarques comerciales.";
 	});
 			//UNDELINE ACTIVE
 		document.getElementById("visas").addEventListener("click", function () {
-		document.getElementById("visas").style.textDecoration = 'underline'
+		document.getElementById("visas").style.borderBottom = '10px solid red';
+		document.getElementById("pasaportes").style.borderBottom = 'none';
+		document.getElementById("sentri").style.borderBottom = 'none';
+		document.getElementById("fast").style.borderBottom = 'none';
+
+	});
+
+	//PASAPORTES
+			document.getElementById("pasaportes").addEventListener("click", function () {
+		document.getElementById("text").innerHTML="Agilizamos tu trámite de pasaporte, te asesoramos para que obtengas el permiso para dejar el país y puedas ingresar sin complicaciones a la unón americana.<br>Podemos tramitar este documento por un periodo de 3, 5 o 10 años, dependiendo de tus necesidades.";
+	});
+			//UNDELINE ACTIVE
+		document.getElementById("pasaportes").addEventListener("click", function () {
+		document.getElementById("pasaportes").style.borderBottom = '10px solid red';
+		document.getElementById("visas").style.borderBottom = 'none';
+		document.getElementById("sentri").style.borderBottom = 'none';
+		document.getElementById("fast").style.borderBottom = 'none';
+
+
+	});
+
+//SENTRI
+		document.getElementById("sentri").addEventListener("click", function () {
+		document.getElementById("text").innerHTML="SENTRI es la tarjeta inteligente con identificación por radio frecuencia que permite un cruce acelerado de la frontera terrestre entre Estados Unidos y México. Nosotros lo apoyamos a que se le otorgue este permiso para cruzar la frontera de forma más ágil.";
+	});
+			//UNDELINE ACTIVE
+		document.getElementById("sentri").addEventListener("click", function () {
+		document.getElementById("sentri").style.borderBottom = '10px solid red';
+		document.getElementById("visas").style.borderBottom = 'none';
+		document.getElementById("pasaportes").style.borderBottom = 'none';
+		document.getElementById("fast").style.borderBottom = 'none';
+
+
+	});
+
+//FAST
+		document.getElementById("fast").addEventListener("click", function () {
+		document.getElementById("text").innerHTML="Le ayudamos a agilizar la circulación y el despacho de mercancías hacia E.U.A para reducir los tiempos de espera y costos de operación de su empresa.<br>Por medio de carriles exclusivos para el transporte de mercancías, los importadores y exportadores con buen historial fiscal y aduaneros, pueden ahorrar tiempo y dinero, reduciendo el número de inspecciones.";
+	});
+			//UNDELINE ACTIVE
+		document.getElementById("fast").addEventListener("click", function () {
+		document.getElementById("fast").style.borderBottom = '10px solid red';
+		document.getElementById("visas").style.borderBottom = 'none';
+		document.getElementById("pasaportes").style.borderBottom = 'none';
+		document.getElementById("sentri").style.borderBottom = 'none';
+
+
 	});
 
 

@@ -30,7 +30,7 @@
 }
 
 .footer{
-	background-color: #dc3545;
+	background-color: #00387e;
 	padding: 3.5%;
 }
 
@@ -104,4 +104,12 @@
 	margin-top: 5%;
 	margin-bottom: 5%;
 	padding:1%;
+}
+.white-ubicacion{
+	padding: 20%;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.heading-padding{
+
 }
