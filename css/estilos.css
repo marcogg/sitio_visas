@@ -113,3 +113,11 @@
 .heading-padding{
 
 }
+
+.pointer{
+	cursor: pointer;
+}
+
+.visas-activo{
+	border-bottom: 10px red solid;
+}
