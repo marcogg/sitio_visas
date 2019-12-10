@@ -46,7 +46,7 @@ require('constant.php');
 		  }	
 	}
 	
-	$toEmail = "marcogarcia.gon@gmail.com";
+	$toEmail = "lared.mh@gmail.com";
 	$mailHeaders = "De: " . $user_name . "<" . $user_email . ">\r\n";
 	$mailBody = "Nombre: " . $user_name . "\n";
 	$mailBody .= "Email: " . $user_email . "\n";
