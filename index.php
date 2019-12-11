@@ -306,7 +306,7 @@ require('constant.php');
 			<div id="mail-status"></div>			
 			<button type="Submit" id="send-message" class="btn-danger" style="clear:both;">Enviar</button>
 		</form>
-		<div id="loader-icon" style="display:none;"><img src="img/loader.gif" /></div>
+		<div id="loader-icon" style="display:none;"><img src="img/loader.gif" width="64" /></div>
 		</div>
 						</div>
 					</div>
