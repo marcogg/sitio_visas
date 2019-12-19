@@ -39,7 +39,7 @@ require('constant.php');
 		</script>
 		<script>
 		$(document).ready(function (e){
-			$("#frmContact").on('submit',(function(e){
+			$("#frmVisa").on('submit',(function(e){
 				e.preventDefault();
 				$("#mail-status").hide();
 				$('#send-message').hide();
@@ -52,6 +52,7 @@ require('constant.php');
 					"name":$('input[name="name"]').val(),
 					"email":$('input[name="email"]').val(),
 					"phone":$('input[name="phone"]').val(),
+					"content":$('textarea[name="content"]').val(),
 									"g-recaptcha-response":$('textarea[id="g-recaptcha-response"]').val()},
 					success: function(response){
 					$("#mail-status").show();
@@ -95,7 +96,6 @@ require('constant.php');
 				width: 100%;
 				display:none;
 				font-size: 1em;
-				font-family: "Georgia", Times, serif;
 				color: rgb(40, 40, 40);
 			}
 		.error{background-color: #F7902D;  margin-bottom: 40px;}
@@ -143,7 +143,7 @@ require('constant.php');
 						</div>-->
 						<div class="col-lg-6 padding-container d-inline" style="background-color: white; padding: 5%;">
 							<div id="message">
-								<form id="frmContact" action="" method="POST" novalidate="novalidate">
+								<form id="frmVisa" action="" method="POST" novalidate="novalidate">
 									<div class="label">Nombre:</div>
 									<div class="field">
 										<input type="text" id="name" name="name" placeholder="Ingrese su nombre completo" title="Please enter your name" class="required" aria-required="true" required>
