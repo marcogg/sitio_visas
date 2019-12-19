@@ -54,7 +54,7 @@ require('constant.php');
 	$mailBody .= "Mensaje: " . $content . "\n";
 
 	if (mail($toEmail, "Contact Mail", $mailBody, $mailHeaders)) {
-	    $output = json_encode(array('type'=>'message', 'text' => '<script>window.location.href="gracias.html"</script>'));
+	    $output = json_encode(array('type'=>'message', 'text' => '<script>window.location.href="datos-enviados.html"</script>'));
 	    die($output);
 	} else {
 	    $output = json_encode(array('type'=>'error', 'text' => 'Ha ocurrido un error, por favor contáctenos al correo:'.SENDER_EMAIL));

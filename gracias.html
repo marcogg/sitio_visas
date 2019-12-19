@@ -1,0 +1,213 @@
+<?php
+require('constant.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>LA RED-Solutions</title>
+		<!--Estilos custom-->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<!-- Bootstrap core CSS -->
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom fonts for this template -->
+		<!--<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<!-- Plugin CSS -->
+		<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="css/creative.min.css" rel="stylesheet">
+		<!--FAVICON-->
+		<link rel="shortcut icon" type="image/png" href="img/favicon.jpg"/>
+		<link rel="shortcut icon" type="image/png" href="img/favicon.jpg"/>
+		
+		<script src="component/jquery/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+		window._mfq = window._mfq || [];
+		(function() {
+		var mf = document.createElement("script");
+		mf.type = "text/javascript"; mf.async = true;
+		mf.src = "//cdn.mouseflow.com/projects/c5f0a2eb-b024-460f-8308-a32df0e14243.js";
+		document.getElementsByTagName("head")[0].appendChild(mf);
+		})();
+		</script>
+		<script>
+		$(document).ready(function (e){
+			$("#frmContact").on('submit',(function(e){
+				e.preventDefault();
+				$("#mail-status").hide();
+				$('#send-message').hide();
+				$('#loader-icon').show();
+				$.ajax({
+					url: "contact_form.php",
+					type: "POST",
+					dataType:'json',
+					data: {
+					"name":$('input[name="name"]').val(),
+					"email":$('input[name="email"]').val(),
+					"phone":$('input[name="phone"]').val(),
+					"content":$('textarea[name="content"]').val(),
+									"g-recaptcha-response":$('textarea[id="g-recaptcha-response"]').val()},
+					success: function(response){
+					$("#mail-status").show();
+					$('#loader-icon').hide();
+					if(response.type == "error") {
+						$('#send-message').show();
+										$("#mail-status").attr("class","error");
+					} else if(response.type == "message"){
+						$('#send-message').hide();
+													$("#mail-status").attr("class","success");
+					}
+						$("#mail-status").html(response.text);
+					},
+					error: function(){}
+				});
+			}));
+		});
+		</script>
+		<!--FONT-AWESOME-->
+		<script src="https://kit.fontawesome.com/7c9178a2fa.js" crossorigin="anonymous"></script>
+		<style>
+		.label {margin: 2px 0;}
+			.field {margin: 0 0 20px 0;}
+			.content {width: 960px;margin: 0 auto;}
+			
+			div#central {margin: 40px 0px 100px 0px;}
+			@media all and (min-width: 768px) and (max-width: 979px) {.content {width: 750px;}}
+			@media all and (max-width: 767px) {
+				body {margin: 0 auto;word-wrap:break-word}
+				.content {width:auto;}
+						div#central {	margin: 40px 20px 100px 20px;}
+			}
+				body {font-family: 'Helvetica',Arial,sans-serif;background:#ffffff;margin: 0 auto;-webkit-font-smoothing: antialiased;  font-size: initial;line-height: 1.7em;}
+					input, textarea {width:100%;padding: 15px;font-size:1em;border: 1px solid #A1A1A1;	}
+			button {
+				padding: 12px 60px;
+				background: #5BC6FF;
+				border: none;
+				color: rgb(40, 40, 40);
+				font-size:1em;
+				font-family: "Georgia", Times, serif;
+					cursor: pointer;
+			}
+			#message {  padding: 0px 40px 0px 0px; }
+			#mail-status {
+				padding: 12px 20px;
+				width: 100%;
+				display:none;
+				font-size: 1em;
+				font-family: "Georgia", Times, serif;
+				color: rgb(40, 40, 40);
+			}
+		.error{background-color: #F7902D;  margin-bottom: 40px;}
+		.success{background-color: #48e0a4; }
+				.g-recaptcha {margin: 0 0 25px 0;}
+		</style>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154418485-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-154418485-1');
+		</script>
+	</head>
+	<body id="page-top">
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+			
+			<div class="container">
+				<div class="col-lg-4">
+					<span class="nav-item">
+						<p style="font-weight: bold !important;" class="text-center text-white"><strong>
+							<i class="fab fa-whatsapp" style=""></i>
+							<a class="text-white" href="https://wa.me/52867 7131020">867 713 1020</a> / <a class="text-white" href="https://wa.me/52867 713 1022">867 713 1022</a>
+							</strong>
+						</p>
+					</span>
+				</div>
+				<div class="row col-lg-8">
+					
+					<a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.png" width="120"></a>
+					
+					<button class="navbar-toggler navbar-toggler-right float-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="index.php#about">Nosotros</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="index.php#services">Servicios</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="index.php#portfolio">Ubicación</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="index.php#contact">Contacto</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<header class="text-center text-white d-flex parallax" style="background-image: url('img/header.jpg'); background-size: cover;">
+			<div class="container my-auto">
+				<div class="row">
+					<div class="col-lg-12 heading-padding" style="padding-right: 25%; padding-left: 25%;">
+						<div style="background-color:rgba(17, 35, 85, 0.7);background-blend-mode: multiply; ">
+							<h1 class="section-heading text-center" style="font-size: 2em;  padding: 2%; color: white;">Gracias por tu información, en breve te contactaremos</h1>
+						</div>
+						<div>
+							<a href="https://wa.me/528677131020"class="btn btn-danger btn-block"><i class="fab fa-whatsapp" style=""></i> Enviar mensaje</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+<section>
+	<div class="container-fluid">
+		<div class="row">
+			
+		</div>
+	</div>
+</section>
+			
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="d-inline-block text-center col-lg-12">
+							<h4 class="text-white text-center">Siganos en nuestras redes sociales</h4>
+							<a href="https://www.facebook.com/VisasLaRed/?hc_ref=ARQ6WfDyf8v3u2dxfpOUC5F2-c35UytTDz-5EZfMu8C4jfN8ZmZ1iQw2_biIfvmE1K8&fref=nf"><i class="fab fa-2x fa-facebook-f text-white mb-3 sr-icons" style="padding: 2%;"></i></a>
+							<a href="https://twitter.com/VISASLARED?s=08"><i class="fab fa-2x fa-twitter text-white mb-3 sr-icons" style="padding: 2%;"></i></a>
+							<a href="https://www.linkedin.com/in/felix-mireles-1a032b72/"><i class="fab fa-2x fa-linkedin-in text-white mb-3 sr-icons" style="padding: 2%;"></i></a>
+							<small><p class="text-white d-none">Consulta nuestro <a href="" class="text-white">Aviso de Privacidad</p></a></small>
+						</div>
+						<div class="d-inline-block">
+							<h1 style="display:none;">
+							Diseñado por <a href="https://www.dimarcogarcia.com">dimarcogarcia.com</a> y <a href="http://www.creaty.com.mx">creaty</a>
+							</h1>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- Bootstrap core JavaScript -->
+			<script src="vendor/jquery/jquery.min.js"></script>
+			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<!-- Plugin JavaScript -->
+			<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+			<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+			<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+			<!-- Custom scripts for this template -->
+			<script src="js/creative.min.js"></script>
+		</body>
+	</html>
