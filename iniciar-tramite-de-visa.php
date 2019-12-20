@@ -53,6 +53,7 @@ require('constant.php');
 					"email":$('input[name="email"]').val(),
 					"phone":$('input[name="phone"]').val(),
 					"content":$('textarea[name="content"]').val(),
+					"tipo-visa":$('select[name="tipo-visa"]').val(),
 									"g-recaptcha-response":$('textarea[id="g-recaptcha-response"]').val()},
 					success: function(response){
 					$("#mail-status").show();
@@ -88,7 +89,7 @@ require('constant.php');
 						div#central {	margin: 40px 20px 100px 20px;}
 			}
 				body {margin: 0 auto;-webkit-font-smoothing: antialiased;  font-size: initial;line-height: 1.7em;}
-					input, textarea {width:100%;padding: 15px;font-size:1em;border: 1px solid #A1A1A1;	}
+					input, textarea, select {width:100%;padding: 15px;font-size:1em;border: 1px solid #A1A1A1;	}
 			
 			#message {  padding: 0px 40px 0px 0px; }
 			#mail-status {
@@ -125,7 +126,7 @@ require('constant.php');
 						<div class="col-lg-6 mx-auto d-inline text-center">
 							
 							<img src="img/us-embassy.png" class="img-responsive" width="300">
-							<h2 style="font-weight: bold; font-size: 2rem;" class="mt-5">Programa para Tramitar la Visa de turista B1/B2 en Español</h2>
+							<h2 style="font-weight: bold; font-size: 2rem;" class="mt-5">Programa para Tramitar la Visa en Español</h2>
 							<p>Rellene el formulario anexo para iniciar el trámite de su visa. Al finalizar oprima el botón <b>"siguiente"</b> para nuevas instrucciones.</p>
 						</div>
 						<!--<div class="col-lg-6 mx-auto d-inline text-center" id="contact">
@@ -159,6 +160,17 @@ require('constant.php');
 									<div class="label">Nacionalidad:</div>
 									<div class="field">
 										<textarea id="comment-content" name="content" placeholder="Escriba su país de origen" rows="1" cols="10"></textarea>
+									</div>
+									<div class="label">Tipo de Visa:</div>
+									<div class="field">
+										<select id="tipo-visa" name="tipo-visa">
+											<option value="turista">Turista</option>
+											<option value="estudiante">Estudiante</option>
+											<option value="trabajador">Trabajador Temporal</option>
+											<option value="fast">Fast</option>
+											<option value="sentri">SENTRI</option>
+										</select>
+										
 									</div>
 									<div class="g-recaptcha" data-sitekey="<?php echo SITE_KEY; ?>"></div>
 									<div id="mail-status"></div>

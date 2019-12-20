@@ -7,6 +7,7 @@ require('constant.php');
     $user_email     = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $user_phone     = filter_var($_POST["phone"], FILTER_SANITIZE_STRING);
     $content   = filter_var($_POST["content"], FILTER_SANITIZE_STRING);
+    $tipo   = filter_var($_POST["tipo-visa"], FILTER_SANITIZE_STRING);
     
     if(empty($user_name)) {
 		$empty[] = "<b>Nombre</b>";		
@@ -51,7 +52,8 @@ require('constant.php');
 	$mailBody = "Nombre: " . $user_name . "\n";
 	$mailBody .= "Email: " . $user_email . "\n";
 	$mailBody .= "Tel: " . $user_phone . "\n";
-	$mailBody .= "Mensaje: " . $content . "\n";
+	$mailBody .= "Nacionalidad: " . $content . "\n";
+	$mailBody .= "Tipo Visa: " . $tipo . "\n";
 
 	if (mail($toEmail, "Contact Mail", $mailBody, $mailHeaders)) {
 	    $output = json_encode(array('type'=>'message', 'text' => '<script>window.location.href="datos-enviados.html"</script>'));
