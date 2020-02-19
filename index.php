@@ -8,7 +8,7 @@ require('constant.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" user-scalable="no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<title>LA RED-Solutions</title>
+		<title>LA RED-Solutions - Matehuala</title>
 		<!--Estilos custom-->
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
 		<!-- Bootstrap core CSS -->
@@ -120,7 +120,7 @@ require('constant.php');
 					<span class="nav-item">
 						<p style="font-weight: bold !important;" class="text-center text-white"><strong>
 							<i class="fab fa-whatsapp" style=""></i>
-							<a class="text-white" href="https://wa.me/52867 7131020">867 713 1020</a> / <a class="text-white" href="https://wa.me/52867 713 1022">867 713 1022</a>
+							<a class="text-white" href="https://wa.me/528671436410">(867) 143 64 10</a> / <i class="fa fa-phone" style=""></i><a class="text-white" href="tel:4881297652"> 488 129 7652</a>
 							</strong>
 						</p>
 					</span>
@@ -239,14 +239,14 @@ require('constant.php');
 					<div class="col-lg-12 text-center padding-showroom" style="padding:20%;">
 						<div class="white-ubicacion">
 							<h1 style="color: #00387e;">UBICACIÓN</h1>
-							<h4>Matriz</h4>
-							<p style="color: #00387e;">Benito juárez 603 B<br>San Nicolás<br>San Nicolás de los Garza<br>México</p>
-							<a href="https://goo.gl/maps/GXacrLHC5RH2"target="_blank"><button class="btn btn-danger">Ver Mapa</button></a>
+							<h4>Matehuala</h4>
+							<p style="color: #00387e;">Galeana 114 B, Centro, CP 78700 <br>Matehuala, San Luis Potosí</p>
+							<a href="https://goo.gl/maps/XqxTwVeVtwPVQ93s9"target="_blank"><button class="btn btn-danger">Ver Mapa</button></a>
 							<br>
 							<br>
-							<h4>Sucursal Nuevo laredo</h4>
+							<!--<h4>Sucursal Nuevo laredo</h4>
 							<p style="color: #00387e;">Maclovio Herrera #2809, <br>Ferrocarril, 88050<br> Nuevo Laredo, México</p>
-							<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.468028490436!2d-99.50904055200343!3d27.485816282800098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866122369abca34f%3A0x7f5a1c8ca4e7ac65!2sCalle%20Maclovio%20Herrera%202809%2C%20Ferrocarril%2C%2088050%20Nuevo%20Laredo%2C%20Tamps.!5e0!3m2!1ses-419!2smx!4v1576010989789!5m2!1ses-419!2smx" target="_blank"><button class="btn btn-danger">Ver Mapa</button></a><br><br>
+							<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.468028490436!2d-99.50904055200343!3d27.485816282800098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866122369abca34f%3A0x7f5a1c8ca4e7ac65!2sCalle%20Maclovio%20Herrera%202809%2C%20Ferrocarril%2C%2088050%20Nuevo%20Laredo%2C%20Tamps.!5e0!3m2!1ses-419!2smx!4v1576010989789!5m2!1ses-419!2smx" target="_blank"><button class="btn btn-danger">Ver Mapa</button></a><br><br>-->
 							
 							
 						</div>
@@ -260,16 +260,13 @@ require('constant.php');
 							<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 								<div class="carousel-inner">
 									<div class="carousel-item active">
-										<img class="d-block w-100" src="img/1.jpg" alt="Visas">
+										<img class="d-block w-100" src="img/visas-matehuala.jpg" alt="Visas">
 									</div>
 									<div class="carousel-item">
-										<img class="d-block w-100" src="img/2.jpg" alt="Visas">
+										<img class="d-block w-100" src="img/visas-matehuala-2.jpg" alt="Visas">
 									</div>
 									<div class="carousel-item">
-										<img class="d-block w-100" src="img/3.jpg" alt="Visas">
-									</div>
-									<div class="carousel-item">
-										<img class="d-block w-100" src="img/4.jpg" alt="Visas">
+										<img class="d-block w-100" src="img/visas-matehuala-3.jpg" alt="Visas">
 									</div>
 								</div>
 								<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -294,9 +291,7 @@ require('constant.php');
 					<div class="row">
 						<div class="col-lg-6 mx-auto d-inline text-center" id="contact">
 							<h1 class="section-heading ">CONTACTO</h1>
-							<p style="color: #00387e;">Lic. J. Félix Mireles Reyes<br>Asesoría Profesional<br>Móvil (Whatsapp): (867) 143 64 10 <br> (867) 231 53 09<br>Tel: 867 714 21 02<br><br>Teléfonos Monterrey
-								<br>
-								<a href="tel:81 2704385">81 27043853</a> y <a href="tel:81 27043856">81 27043856</a>
+							<p style="color: #00387e;">Lic. J. Félix Mireles Reyes<br>Asesoría Profesional<br>Móvil (Whatsapp): <a href="https://wa.me/528671436410">(867) 143 64 10</a> <br>Tel: <a href="tel:4881297652">488 129 7652</a><br>
 								<br>Horarios:
 								<br>
 								Lunes a Viernes de 8:00-18:00hrs.
